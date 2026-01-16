@@ -7,7 +7,7 @@ import { ProjectImageSlider } from "./project_image_slider"
 const projects = [
   {
     title: "AI-Powered Health Tracking System for Autistic Children",
-    tech: ["Flutter", "Django", "AI", "Clean Architecture"],
+    tech: ["Flutter", "Django", "AI", "Clean Architecture", "Postgresql"],
     description: [
       "Built to help parents and caregivers track behavioral progress and identify patterns",
       "Capstone project (team of 5)",
@@ -38,7 +38,7 @@ const projects = [
   },
   {
     title: "Campus Sync",
-    tech: ["Django", "Hackathon"],
+    tech: ["Django", "Hackathon", "React"],
     description: [
       "Campus-wide event management platform for creating, searching, and RSVPing to student events",
       "Hackathon team project with defined backend ownership",
@@ -50,6 +50,39 @@ const projects = [
     images: ["/campussync.jpg"],
     link: "https://campussync.vercel.app/",
     github: "https://github.com/GDSC-Hackaton/Django-Backend",
+    cover: "cover"
+  },
+  {
+    title: "Ecommerce App",
+    tech: ["Flutter","Clean Architecture", "Test Driven Development","Internship"],
+    description: [
+      "Mobile e-commerce application enabling product browsing, search, purchase, and management",
+"Implemented using Clean Architecture for scalability and maintainability",
+"Built core features including product search, add, edit, and delete workflows",
+"Integrated user-to-owner communication for product inquiries and purchasing",
+"Strengthened understanding of mobile app architecture and domain-driven design",
+
+    ],
+    images: ["/onboarding.png", "/elogin.png","/esignup.png", "/shoelist.png","shoedetail.png"],
+    link: "#",
+    github: "https://github.com/Mihretthe/e-commerce-internship",
+    cover: "contain"
+  },
+  {
+    title: "Diabetic Predicrion",
+    tech: ["Django", "ML", "Pandas"],
+    description: [
+      "Diabetic prediction system using machine learning to classify patient risk",
+"Group project with collaborative model development and data analysis",
+"Built and trained a Random Forest Classifier using pandas and scikit-learn",
+"Implemented data preprocessing, training/testing split, and accuracy evaluation",
+"Learned practical ML workflow and integration of models into applications",
+
+
+    ],
+    images: ["/diabetic.jpg"],
+    link: "",
+    github: "https://github.com/Mihretthe/DiabeticPrediction",
     cover: "cover"
   },
 ]

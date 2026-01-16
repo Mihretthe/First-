@@ -68,7 +68,7 @@ export default function HeroSection() {
 
             <p className="text-lg text-muted-foreground mb-12 leading-relaxed text-balance max-w-2xl">
               Full-stack software engineer focused on building real-world, scalable products with strong foundations in
-              data structures, clean architecture, and system design.
+              data structures & algorithms, clean architecture, and system design.
             </p>
 
             <div className="flex gap-4 flex-wrap">

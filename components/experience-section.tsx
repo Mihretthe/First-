@@ -67,7 +67,7 @@ function ExperienceCard({ experience }: ExperienceCardProps) {
       >
         {/* Front - Logo Side */}
         <div
-          className="absolute w-full h-full bg-card border border-border rounded-lg shadow-md flex flex-col items-center justify-center p-6 flex-shrink-0"
+          className="absolute w-full h-full border border-border rounded-lg shadow-md flex flex-col items-center justify-center p-6 flex-shrink-0"
           style={{ backfaceVisibility: "hidden" }}
         >
           <Image
@@ -82,7 +82,7 @@ function ExperienceCard({ experience }: ExperienceCardProps) {
 
         {/* Back - Description Side */}
         <div
-          className="absolute w-full h-full bg-primary text-primary-foreground rounded-lg shadow-md flex flex-col items-center justify-center p-6 flex-shrink-0"
+          className="absolute w-full h-full text-primary-foreground rounded-lg shadow-md flex flex-col items-center justify-center p-6 flex-shrink-0"
           style={{
             backfaceVisibility: "hidden",
             transform: "rotateY(180deg)",
