@@ -41,8 +41,8 @@ export default function HeroSection() {
 
   const downloadResume = () => {
     const element = document.createElement("a")
-    element.setAttribute("href", "/placeholder-resume.pdf")
-    element.setAttribute("download", "Mihret_Tekalgn_Resume.pdf")
+    element.setAttribute("href", "/Mihret-Tekalgn.pdf")
+    element.setAttribute("download", "Mihret-Tekalgn_Resume.pdf")
     element.style.display = "none"
     document.body.appendChild(element)
     element.click()
@@ -99,9 +99,9 @@ export default function HeroSection() {
             <div className="relative w-full max-w-sm">
               <div className="absolute inset-0 bg-gradient-to-r from-primary/20 to-transparent rounded-2xl blur-3xl animate-pulse" />
               <img
-                src="/character-at-desk.jpg"
+                src="/image_1.png"
                 alt="Animated character working on computer"
-                className="relative rounded-2xl w-full h-auto shadow-2xl hover:scale-105 transition-transform duration-300 border border-primary/20"
+                className="relative rounded-2xl w-full h-auto hover:scale-105 transition-transform duration-300 "
               />
             </div>
           </div>

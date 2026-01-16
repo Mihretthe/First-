@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   title: "Mihret Tekalgn | Software Engineer",
   description:
     "Full-stack software engineer focused on building real-world, scalable products with strong foundations in data structures, clean architecture, and system design.",
-  generator: "v0.app",
+
   icons: {
     icon: [
       {

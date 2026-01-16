@@ -1,80 +1,161 @@
 "use client"
 
-import { useEffect, useRef } from "react"
+import { useState } from "react"
+import Image from "next/image"
 
-const skillGroups = [
+interface SkillCardProps {
+  name: string
+  description: string
+  logoUrl: string
+  logoAlt: string
+}
+
+
+const skills = [
   {
-    title: "Languages",
-    skills: ["Python", "Dart", "JavaScript"],
+    name: "Python",
+    description: "Backend development and data structures",
+    logoUrl: "/python.png",
+    logoAlt: "Python logo",
   },
   {
-    title: "Backend",
-    skills: ["Django", "Django REST Framework", "REST APIs"],
+    name: "React",
+    description: "Frontend development and state management",
+    logoUrl: "/react.png",
+    logoAlt: "React logo",
   },
   {
-    title: "Mobile",
-    skills: ["Flutter", "React Native", "Bloc", "State Management"],
+    name: "Django",
+    description: "Web framework for robust backend APIs",
+    logoUrl: "/django.png",
+    logoAlt: "Django logo",
   },
   {
-    title: "Frontend",
-    skills: ["React", "HTML", "CSS"],
+    name: "Flutter",
+    description: "Cross-platform mobile development",
+    logoUrl: "/flutter.png",
+    logoAlt: "Flutter logo",
   },
   {
-    title: "Concepts",
-    skills: ["Data Structures & Algorithms", "Clean Architecture", "System Design"],
+    name: "HTML",
+    description: "Markup Language",
+    logoUrl: "/html.png",
+    logoAlt: "HTML logo",
   },
   {
-    title: "Tools",
-    skills: ["Git", "API Integration", "Testing-Oriented Workflows"],
+    name: "CSS",
+    description: "Styling Webpages",
+    logoUrl: "/css.png",
+    logoAlt: "CSS logo",
+  },
+  {
+    name: "Data Structures and Algorithms",
+    description: "Problem Solving",
+    logoUrl: "/dsa.png",
+    logoAlt: "DSA logo",
+  },
+  {
+    name: "BLoc State Management",
+    description: "State Management in Flutter",
+    logoUrl: "/bloc.png",
+    logoAlt: "BLoc logo",
+  },
+  {
+    name: "Dart",
+    description: "Mobile App Development",
+    logoUrl: "/dart.png",
+    logoAlt: "Dart logo",
+  },
+    {
+    name: "C++",
+    description: "Data Structures",
+    logoUrl: "/cplusplus.png",
+    logoAlt: "C++ logo",
+  },
+  {
+    name: "JavaScript",
+    description: "Frontend development",
+    logoUrl: "/javascript.png",
+    logoAlt: "JavaScript logo",
+  },
+  {
+    name: "React Native",
+    description: "Mobile App Development",
+    logoUrl: "/react_native.png",
+    logoAlt: "React Native logo",
+  },
+  {
+    name: "REST API",
+    description: "Backend development",
+    logoUrl: "/restapi.png",
+    logoAlt: "REST API logo",
+  },
+  {
+    name: "My SQL",
+    description: "Database",
+    logoUrl: "/mysql.png",
+    logoAlt: "MYSQL logo",
+  },
+  {
+    name: "Postgresql",
+    description: "Database",
+    logoUrl: "/postgresql.png",
+    logoAlt: "Postgresql logo",
+  },
+  {
+    name: "Postman Testing",
+    description: "Testing",
+    logoUrl: "/postman.png",
+    logoAlt: "Postman logo",
   },
 ]
 
-export default function SkillsSection() {
-  const contentRef = useRef<HTMLDivElement>(null)
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            const cards = entry.target.querySelectorAll(".skill-card")
-            cards.forEach((card, index) => {
-              setTimeout(() => {
-                card.classList.add("opacity-100", "translate-y-0")
-              }, index * 100)
-            })
-          }
-        })
-      },
-      { threshold: 0.1 },
-    )
-
-    if (contentRef.current) {
-      observer.observe(contentRef.current)
-    }
-
-    return () => observer.disconnect()
-  }, [])
+function SkillCard({ name, description, logoUrl, logoAlt }: SkillCardProps) {
+  const [isHovered, setIsHovered] = useState(false)
 
   return (
-    <section className="py-24 px-6">
-      <div className="max-w-3xl mx-auto">
-        <h2 className="text-4xl font-bold mb-12">Skills</h2>
-        <div ref={contentRef} className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          {skillGroups.map((group, index) => (
-            <div
-              key={index}
-              className="skill-card opacity-0 translate-y-8 transition-all duration-700 p-6 bg-card border border-border rounded-lg"
-            >
-              <h3 className="text-lg font-semibold mb-4">{group.title}</h3>
-              <div className="flex flex-wrap gap-2">
-                {group.skills.map((skill, skillIndex) => (
-                  <span key={skillIndex} className="px-3 py-1 bg-accent/50 text-accent-foreground rounded-full text-sm">
-                    {skill}
-                  </span>
-                ))}
-              </div>
-            </div>
+    <div
+      className="relative w-full aspect-square flex items-center justify-center cursor-pointer group"
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
+    >
+      <div className="relative w-32 h-40 rounded-lg overflow-hidden  flex-shrink-0">
+        <Image
+          src={logoUrl || "/placeholder.svg"}
+          alt={logoAlt}
+          fill
+          className="object-contain group-hover:scale-105 transition-transform duration-300"
+        />
+
+        {/* Overlay on Hover */}
+        <div
+          className={`absolute inset-0 bg-primary/90 flex flex-col items-center justify-center p-6 rounded-lg transition-opacity duration-300 ${
+            isHovered ? "opacity-100" : "opacity-0"
+          }`}
+        >
+          <h3 className="text-xl font-semibold text-primary-foreground text-center mb-3">{name}</h3>
+          {/* <p className="text-sm text-primary-foreground/90 text-center leading-relaxed">{description}</p> */}
+        </div>
+      </div>
+    </div>
+  )
+}
+
+
+export default function SkillsSection() {
+  return (
+    <section className="py-24">
+      <div className="max-w-6xl mx-auto">
+        <h1 className="text-4xl font-bold mb-12">Skills</h1>
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-1">
+          {skills.map((skill) => (
+            <SkillCard
+              key={skill.name}
+              name={skill.name}
+              description={skill.description}
+              logoUrl={skill.logoUrl}
+              logoAlt={skill.logoAlt}
+            />
           ))}
         </div>
       </div>

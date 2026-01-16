@@ -27,7 +27,7 @@ export default function AboutSection() {
 
   return (
     <section id="about" className="py-24 px-6 bg-gradient-to-b from-transparent via-primary/5 to-transparent">
-      <div className="max-w-5xl mx-auto" ref={containerRef}>
+      <div className="max-w-6xl mx-auto" ref={containerRef}>
         <div className="fade-in-element opacity-0 translate-y-8 transition-all duration-1000 mb-16">
           <h2 className="text-5xl md:text-6xl font-bold text-balance leading-tight mb-4">About Me</h2>
           <div className="h-1 w-20 bg-gradient-to-r from-primary to-primary/40 rounded-full"></div>

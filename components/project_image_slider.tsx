@@ -6,10 +6,11 @@ import { cn } from "@/lib/utils"
 
 interface ProjectImageSliderProps {
   images: string[]
-  alt: string
+  alt: string,
+  cover?: string
 }
 
-export function ProjectImageSlider({ images, alt }: ProjectImageSliderProps) {
+export function ProjectImageSlider({ images, alt, cover }: ProjectImageSliderProps) {
   const [currentIndex, setCurrentIndex] = useState(0)
   const [isAutoplay, setIsAutoplay] = useState(true)
 
@@ -40,7 +41,7 @@ export function ProjectImageSlider({ images, alt }: ProjectImageSliderProps) {
 
   if (images.length === 0) {
     return (
-      <div className="w-full h-full bg-muted flex items-center justify-center rounded-lg">
+      <div className="w-full h-full  flex items-center justify-center rounded-lg">
         <p className="text-muted-foreground">No images available</p>
       </div>
     )
@@ -48,7 +49,7 @@ export function ProjectImageSlider({ images, alt }: ProjectImageSliderProps) {
 
   return (
     <div
-      className="relative w-full h-full bg-white from-primary/10 to-primary/5 rounded-lg overflow-hidden group"
+      className="relative w-full h-full  from-primary/10 to-primary/5 rounded-lg overflow-hidden group"
       onMouseEnter={() => setIsAutoplay(false)}
       onMouseLeave={() => setIsAutoplay(true)}
     >
@@ -59,12 +60,14 @@ export function ProjectImageSlider({ images, alt }: ProjectImageSliderProps) {
             src={image || "/placeholder.svg"}
             alt={`${alt} - slide ${index + 1}`}
             className={cn(
-              "absolute inset-0 w-full h-full object-contain transition-opacity duration-500",
-              currentIndex === index ? "opacity-100" : "opacity-0",
-            )}
+    "absolute inset-0 w-full h-full transition-opacity duration-500",
+    cover === "contain" ? "object-contain" : "object-cover",
+    currentIndex === index ? "opacity-100" : "opacity-0",
+  )}
+
           />
         ))}
-        <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent group-hover:from-black/50 transition-colors" />
+        {/* <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent group-hover:from-black/50 transition-colors" /> */}
       </div>
 
       {images.length > 1 && (

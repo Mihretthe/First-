@@ -11,7 +11,7 @@ const projects = [
     description: [
       "Built to help parents and caregivers track behavioral progress and identify patterns",
       "Capstone project (team of 5)",
-      "Role: Team Lead, Mobile Development, AI Integration",
+      "Role: Team Lead, Mobile & Backend Development, AI Integration",
       "Applied clean architecture and Bloc state management",
       "Contributed to backend development and system design",
       "Currently rebuilding as a solo project based on feedback",
@@ -19,6 +19,7 @@ const projects = [
     images: ["/homepage.png", "/log.png","/community.png", "/analytics.png","login.png", "/sidebar.png", "add_child.png" ],
     link: "#",
     github: "#",
+    cover: "contain"
   },
   {
     title: "AI Blog Generator (YouTube-to-Blog)",
@@ -30,9 +31,10 @@ const projects = [
       "Learned to handle evolving AI documentation and dependencies",
       "UI/UX identified as future improvement",
     ],
-    images: ["/blog-generator-dashboard-interface.jpg", "/youtube-video-summary-tool-ui.jpg", "/article-content-preview-page.jpg"],
+    images: ["/home.jpg", "/pastelink.jpg", "/generating.jpg", "/bloglist.jpg","/blogdetail.jpg","/login.jpg","/signup.jpg"],
     link: "https://ai-blog-generator-7ohz.onrender.com/",
     github: "https://github.com/Mihretthe/AI-Blog-Generator",
+    cover: "cover"
   },
 ]
 
@@ -65,7 +67,7 @@ export default function ProjectsSection() {
 
   return (
     <section className="py-24 px-6">
-      <div className="max-w-5xl mx-auto">
+      <div className="max-w-6xl mx-auto">
         <h2 className="text-4xl font-bold mb-12">Projects</h2>
         <div ref={contentRef} className="space-y-8">
           {projects.map((project, index) => (
@@ -112,7 +114,7 @@ export default function ProjectsSection() {
                 </div>
 
                 <div className="relative h-64 md:h-auto bg-gradient-to-br from-primary/10 to-primary/5 border-t md:border-t-0 md:border-l border-border m-4 md:m-6 rounded-lg overflow-hidden">
-                  <ProjectImageSlider images={project.images} alt={project.title} />
+                  <ProjectImageSlider images={project.images} alt={project.title} cover={project.cover} />
                 </div>
               </div>
             </div>

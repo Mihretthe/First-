@@ -3,9 +3,14 @@
 import type React from "react"
 
 import { useEffect, useRef, useState } from "react"
-import { Github, Linkedin, Mail, Send } from "lucide-react"
+import { Github, Linkedin, Mail, Send, Phone } from "lucide-react"
 
 const contactLinks = [
+   {
+    label: "Phone",
+    icon: Phone,
+    href: "tel:+251979244427",
+  },
   {
     label: "GitHub",
     icon: Github,
@@ -176,6 +181,7 @@ export default function ContactSection() {
                       <div>
                         <p className="font-medium">{link.label}</p>
                         <p className="text-sm text-muted-foreground group-hover:text-primary-foreground/80">
+                          {link.label === "Phone" && "+251979244427"}
                           {link.label === "GitHub" && "github.com/Mihretthe"}
                           {link.label === "LinkedIn" && "linkedin.com/in/mihretthe"}
                           {link.label === "Email" && "mihretekalgn@gmail.com"}
