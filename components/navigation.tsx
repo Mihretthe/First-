@@ -44,7 +44,7 @@ export default function Navigation({ activeSection }: NavigationProps) {
           : "md:bg-transparent md:border-b md:border-border/30 bg-background border-b border-border"
       }`}
     >
-      <div className="max-w-4xl mx-auto px-6 py-4 flex items-center justify-between">
+      <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
         <button
           onClick={() => scrollToSection("hero")}
           className="font-bold text-lg hover:opacity-70 transition-opacity bg-gradient-to-r from-primary to-primary/70 bg-clip-text text-transparent"
