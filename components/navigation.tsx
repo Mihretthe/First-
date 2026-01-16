@@ -39,7 +39,9 @@ export default function Navigation({ activeSection }: NavigationProps) {
   return (
     <nav
       className={`fixed top-0 w-full z-50 transition-all duration-300 ${
-        isSticky ? "bg-background/80 backdrop-blur-md border-b border-border" : "bg-transparent"
+        isSticky
+          ? "bg-background border-b border-border md:bg-background md:border-b md:border-border"
+          : "md:bg-transparent md:border-b md:border-border/30 bg-background border-b border-border"
       }`}
     >
       <div className="max-w-4xl mx-auto px-6 py-4 flex items-center justify-between">

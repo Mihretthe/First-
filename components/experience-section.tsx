@@ -18,7 +18,7 @@ const experiences = [
     description: "Help students learn datastructures and algorithms.",
     logo: "/addiscoder.jpg",
   },
-  
+
   {
     id: 3,
     company: "Eskalate",
@@ -77,19 +77,19 @@ function ExperienceCard({ experience }: ExperienceCardProps) {
             height={120}
             className="mb-4 rounded-lg"
           />
-          <p className="text-center font-semibold text-sm">{experience.company}</p>
+          {/* <p className="text-center font-semibold text-sm">{experience.company}</p> */}
         </div>
 
         {/* Back - Description Side */}
         <div
-          className="absolute w-full h-full text-primary-foreground rounded-lg shadow-md flex flex-col items-center justify-center p-6 flex-shrink-0"
+          className="absolute w-full h-full rounded-lg shadow-md flex flex-col items-center justify-center p-6 flex-shrink-0 border border-cyan-500/50 bg-gradient-to-br from-cyan-900/30 to-cyan-800/20"
           style={{
             backfaceVisibility: "hidden",
             transform: "rotateY(180deg)",
           }}
         >
-          <h3 className="font-semibold text-sm mb-3 text-center leading-tight">{experience.role}</h3>
-          <p className="text-xs text-center leading-relaxed opacity-90">{experience.description}</p>
+          <h3 className="font-semibold text-sm mb-3 text-center leading-tight text-cyan-600">{experience.role}</h3>
+          {/* <p className="text-xs text-center leading-relaxed opacity-90 text-foreground/80">{experience.description}</p> */}
         </div>
       </div>
     </div>
