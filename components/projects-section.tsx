@@ -36,6 +36,22 @@ const projects = [
     github: "https://github.com/Mihretthe/AI-Blog-Generator",
     cover: "cover"
   },
+  {
+    title: "Campus Sync",
+    tech: ["Django", "Hackathon"],
+    description: [
+      "Campus-wide event management platform for creating, searching, and RSVPing to student events",
+      "Hackathon team project with defined backend ownership",
+      "Designed and implemented REST APIs for events, search, and RSVP workflows",
+      "Handled authentication, data modeling, and backend business logic",
+      "Learned rapid backend development and collaboration under hackathon deadlines",
+
+    ],
+    images: ["/campussync.jpg"],
+    link: "https://campussync.vercel.app/",
+    github: "https://github.com/GDSC-Hackaton/Django-Backend",
+    cover: "cover"
+  },
 ]
 
 export default function ProjectsSection() {
