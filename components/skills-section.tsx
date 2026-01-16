@@ -108,6 +108,12 @@ const skills = [
     logoUrl: "/postman.png",
     logoAlt: "Postman logo",
   },
+  {
+    name: "WordPress",
+    description: "Frontend development",
+    logoUrl: "/wordpress.png",
+    logoAlt: "Wordpress logo",
+  },
 ]
 
 function SkillCard({ name, description, logoUrl, logoAlt }: SkillCardProps) {
