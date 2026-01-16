@@ -49,7 +49,7 @@ export default function Navigation({ activeSection }: NavigationProps) {
           onClick={() => scrollToSection("hero")}
           className="font-bold text-lg hover:opacity-70 transition-opacity bg-gradient-to-r from-primary to-primary/70 bg-clip-text text-transparent"
         >
-          MT
+          MIHRETTHE
         </button>
 
         <div className="hidden md:flex gap-8 items-center">
