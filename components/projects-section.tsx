@@ -18,7 +18,7 @@ const projects = [
     ],
     images: ["/homepage.png", "/log.png","/community.png", "/analytics.png","login.png", "/sidebar.png", "add_child.png" ],
     link: "#",
-    github: "#",
+    github: "https://github.com/Mihretthe/Autism/",
     cover: "contain"
   },
   {
