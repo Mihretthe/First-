@@ -110,7 +110,7 @@ export default function ExperienceSection() {
     <section className="py-24 px-6">
       <div className="max-w-6xl mx-auto">
         <div className="mb-12">
-          <p className="font-mono text-xs uppercase tracking-[0.25em] text-primary mb-3">04 / The timeline</p>
+          {/* <p className="font-mono text-xs uppercase tracking-[0.25em] text-primary mb-3">04 / The timeline</p> */}
           <h2 className="text-4xl md:text-5xl font-bold tracking-tight">Experience</h2>
         </div>
 
