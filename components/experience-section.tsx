@@ -47,6 +47,13 @@ const experiences = [
     description: "Help students learn Python.",
     logo: "/shecodes.jpg",
   },
+  {
+    id: 7,
+    company: "Macrovian Technology",
+    role: "Full Stack Engineer",
+    description: "Develop Scalable and Reliable Software",
+    logo: "/final.webp"
+  }
 ]
 
 interface ExperienceCardProps {
