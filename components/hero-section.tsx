@@ -63,7 +63,7 @@ export default function HeroSection() {
             <h1 className="text-6xl md:text-8xl font-bold mb-4 text-balance leading-[0.95] tracking-[-0.06em]">Mihret<br className="hidden md:block" /> Tekalgn<span className="text-primary">.</span></h1>
 
             <p className="text-xl md:text-2xl bg-gradient-to-r from-primary via-primary/80 to-primary/60 bg-clip-text text-transparent font-semibold mb-6">
-              Software Engineer / Backend + Mobile
+              Software Engineer 
             </p>
 
             <p className="text-lg text-muted-foreground mb-12 leading-relaxed text-balance max-w-2xl">
