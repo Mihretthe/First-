@@ -38,16 +38,16 @@ export default function Navigation({ activeSection }: NavigationProps) {
 
   return (
     <nav
-      className={`fixed top-0 w-full z-50 transition-all duration-300 ${
+      className={`fixed top-0 w-full z-50 transition-all duration-300 backdrop-blur-md ${
         isSticky
-          ? "bg-background border-b border-border md:bg-background md:border-b md:border-border"
-          : "md:bg-transparent md:border-b md:border-border/30 bg-background border-b border-border"
+          ? "bg-background/85 border-b border-border"
+          : "bg-background/70 border-b border-border/60"
       }`}
     >
       <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
         <button
           onClick={() => scrollToSection("hero")}
-          className="font-bold text-lg hover:opacity-70 transition-opacity bg-gradient-to-r from-primary to-primary/70 bg-clip-text text-transparent"
+          className="font-mono font-bold text-sm tracking-[0.18em] hover:text-primary transition-colors"
         >
           MIHRETTHE
         </button>
@@ -57,7 +57,7 @@ export default function Navigation({ activeSection }: NavigationProps) {
             <button
               key={link.id}
               onClick={() => scrollToSection(link.id)}
-              className={`text-sm font-medium transition-colors duration-200 ${
+              className={`font-mono text-xs uppercase tracking-widest transition-colors duration-200 ${
                 activeSection === link.id ? "text-primary" : "text-muted-foreground hover:text-foreground"
               }`}
             >

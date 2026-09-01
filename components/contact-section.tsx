@@ -90,7 +90,10 @@ export default function ContactSection() {
     <section className="py-24 px-6 bg-card/50">
       <div className="max-w-4xl mx-auto">
         <div ref={contentRef} className="opacity-0 translate-y-8 transition-all duration-1000">
-          <h2 className="text-4xl font-bold mb-12">Get In Touch</h2>
+          <div className="mb-12">
+            <p className="font-mono text-xs uppercase tracking-[0.25em] text-primary mb-3">05 / Start a conversation</p>
+            <h2 className="text-4xl md:text-5xl font-bold tracking-tight">Get In Touch</h2>
+          </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
             <div className="space-y-6">

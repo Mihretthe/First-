@@ -50,20 +50,20 @@ export default function HeroSection() {
   }
 
   return (
-    <section className="min-h-screen flex items-center justify-center px-6 pt-20 bg-gradient-to-b from-primary/5 via-transparent to-transparent">
+    <section className="min-h-screen flex items-center justify-center px-6 pt-20 overflow-hidden bg-[radial-gradient(circle_at_75%_35%,color-mix(in_srgb,var(--primary)_18%,transparent),transparent_30%),linear-gradient(to_bottom,transparent,var(--background))]">
       <div ref={contentRef} className="max-w-6xl w-full opacity-0 translate-y-8 transition-all duration-1000">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div className="space-y-6 animate-in fade-in slide-in-from-bottom-4 duration-1000">
             <div className="inline-block">
-              <span className="px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-medium animate-in fade-in slide-in-from-left-4 duration-1000 delay-100">
-                ✨ Welcome to my portfolio
+              <span className="px-4 py-2 rounded-full border border-primary/30 bg-primary/10 text-primary font-mono text-xs uppercase tracking-widest animate-in fade-in slide-in-from-left-4 duration-1000 delay-100">
+                Available for meaningful builds
               </span>
             </div>
 
-            <h1 className="text-6xl md:text-7xl font-bold mb-4 text-balance leading-tight">Mihret Tekalgn</h1>
+            <h1 className="text-6xl md:text-8xl font-bold mb-4 text-balance leading-[0.95] tracking-[-0.06em]">Mihret<br className="hidden md:block" /> Tekalgn<span className="text-primary">.</span></h1>
 
             <p className="text-xl md:text-2xl bg-gradient-to-r from-primary via-primary/80 to-primary/60 bg-clip-text text-transparent font-semibold mb-6">
-              Software Engineer | Backend & Mobile
+              Software Engineer / Backend + Mobile
             </p>
 
             <p className="text-lg text-muted-foreground mb-12 leading-relaxed text-balance max-w-2xl">
@@ -74,20 +74,20 @@ export default function HeroSection() {
             <div className="flex gap-4 flex-wrap">
               <button
                 onClick={scrollToProjects}
-                className="px-8 py-3 bg-primary text-primary-foreground font-medium rounded-lg hover:opacity-90 transition-all hover:scale-105 transform flex items-center gap-2 shadow-lg hover:shadow-xl duration-300"
+                className="px-8 py-3 bg-primary text-primary-foreground font-medium rounded-lg hover:opacity-90 transition-all hover:-translate-y-0.5 transform flex items-center gap-2 shadow-[0_12px_30px_-12px_var(--primary)] duration-300"
               >
                 View Projects
                 <ArrowRight size={18} />
               </button>
               <button
                 onClick={scrollToContact}
-                className="px-8 py-3 border border-primary/30 text-foreground font-medium rounded-lg hover:bg-primary/5 transition-all hover:scale-105 transform hover:border-primary duration-300"
+                className="px-8 py-3 border border-border text-foreground font-medium rounded-lg hover:bg-primary/10 transition-all hover:-translate-y-0.5 transform hover:border-primary duration-300"
               >
                 Hire Me
               </button>
               <button
                 onClick={downloadResume}
-                className="px-8 py-3 border border-border text-foreground font-medium rounded-lg hover:bg-accent/50 transition-all hover:scale-105 transform flex items-center gap-2 duration-300"
+                className="px-8 py-3 border border-border text-foreground font-medium rounded-lg hover:bg-accent/50 transition-all hover:-translate-y-0.5 transform flex items-center gap-2 duration-300"
               >
                 <Download size={18} />
                 Resume
@@ -97,7 +97,7 @@ export default function HeroSection() {
 
           <div className="flex justify-center animate-in fade-in slide-in-from-right-4 duration-1000 delay-200">
             <div className="relative w-full max-w-sm">
-              <div className="absolute inset-0 bg-gradient-to-r from-primary/20 to-transparent rounded-2xl blur-3xl animate-pulse" />
+              <div className="absolute inset-0 bg-primary/20 rounded-2xl blur-3xl animate-pulse" />
               <img
                 src="/image_1.png"
                 alt="Animated character working on computer"

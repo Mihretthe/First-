@@ -109,7 +109,10 @@ export default function ExperienceSection() {
   return (
     <section className="py-24 px-6">
       <div className="max-w-6xl mx-auto">
-        <h2 className="text-4xl font-bold mb-12">Experience</h2>
+        <div className="mb-12">
+          <p className="font-mono text-xs uppercase tracking-[0.25em] text-primary mb-3">04 / The timeline</p>
+          <h2 className="text-4xl md:text-5xl font-bold tracking-tight">Experience</h2>
+        </div>
 
         {/* Infinite Sliding Container */}
         <div className="relative overflow-hidden">
@@ -143,7 +146,7 @@ export default function ExperienceSection() {
         </div>
 
         {/* Instructions */}
-        <p className="text-center text-muted-foreground text-sm mt-8">Click cards to flip • Hover to pause</p>
+        <p className="text-center text-muted-foreground font-mono text-xs mt-8">Click cards to flip / hover to pause</p>
       </div>
     </section>
   )

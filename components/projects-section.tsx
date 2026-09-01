@@ -117,12 +117,15 @@ export default function ProjectsSection() {
   return (
     <section className="py-24 px-6">
       <div className="max-w-6xl mx-auto">
-        <h2 className="text-4xl font-bold mb-12">Projects</h2>
+        <div className="mb-12">
+          <p className="font-mono text-xs uppercase tracking-[0.25em] text-primary mb-3">03 / Selected work</p>
+          <h2 className="text-4xl md:text-5xl font-bold tracking-tight">Projects</h2>
+        </div>
         <div ref={contentRef} className="space-y-8">
           {projects.map((project, index) => (
             <div
               key={index}
-              className="project-card opacity-0 translate-y-8 transition-all duration-700 border border-border rounded-lg overflow-hidden hover:border-primary/50 hover:shadow-xl hover:-translate-y-1 duration-300 group"
+              className="project-card opacity-0 translate-y-8 transition-all duration-700 border border-border rounded-lg overflow-hidden bg-card/70 hover:border-primary/60 hover:shadow-[0_20px_60px_-30px_var(--primary)] hover:-translate-y-1 duration-300 group"
             >
               <div className="grid grid-cols-1 md:grid-cols-2">
                 {/* Content on the left */}
